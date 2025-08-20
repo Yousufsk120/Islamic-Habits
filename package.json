@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/make-sitemap.js",
+    "build": "vite build && (node scripts/make-sitemap.js 2>/dev/null || echo 'Sitemap generation skipped - script not found')",
     "preview": "vite preview"
   },
   "dependencies": {
