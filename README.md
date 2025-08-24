@@ -18,21 +18,20 @@ npm run dev
 npm run build
 ```
 
-Deploy the `dist/` folder (e.g., Cloudflare Pages, Netlify).
+Deploy the `dist/` folder to Vercel, Netlify, or other static hosting providers.
 
-**Cloudflare Pages settings**
+**Vercel deployment**
 - Build command: `npm run build`
 - Output directory: `dist`
 - Node version: 20+
 
 ## Features added
 - React Router with code-splitting (lazy pages)
-- Install banner (A2HS)
-- PWA cache + SPA navigation fallback
+- PWA manifest for install banner (A2HS)
 - Rewards system (XP, levels, badges) stored locally
-- Cloudflare Web Analytics snippet (replace `YOUR-CLOUDFLARE-TOKEN` in `index.html`)
+- SPA routing configuration for Vercel
 
-## Deploy (Cloudflare Pages)
+## Deploy (Vercel)
 - Build command: `npm run build`
 - Output: `dist`
-- Ensure routes are served as SPA (fallback to index.html). Cloudflare Pages does this automatically for SPA.
+- Vercel automatically handles SPA routing via the included `vercel.json` configuration.
